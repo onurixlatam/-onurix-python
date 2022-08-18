@@ -5,11 +5,11 @@ headers ={
 }
 
 data = {
-     'client':'2412',
-     'key':'582876138efc20d00c3bd32c046edff0cdd3369061d4c5123747d',
-     'phone':'573203711034',
-     'code':'ZJAH',
-     'app-name':'PruebaSMS',
+     'client':'AQUI_SU_CLIENT',
+     'key':'AQUI_SU_KEY',
+     'phone':'AQUI_EL_NUMERO_DE_CELULAR',
+     'code':'AQUI_NOMBRE_APP',
+     'app-name':'AQUI_CODIGO',
      'country-code':'CO'
 }
 
