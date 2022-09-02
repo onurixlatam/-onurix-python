@@ -1,16 +1,20 @@
 import requests
-headers ={
-'Content-Type':'application/x-www-form-urlencoded',
-'Accept':'application/json'
+import json
+
+url = "https://www.onurix.com/api/v1/whatsapp/send?key=AQUI_SU_KEY&client=AQUI_SU_CLIENT&template=AQUI_EL_NOMBRE_DE_LA_PLANTILLA"
+
+# payload = json.dumps({
+#   "phone": "+57320123457",
+#   "body": [
+#     "Parametro1",
+#     "Parametro2"
+#   ]
+# })
+payload = json.dumps('AQUI_EL_JSON_CON_LOS_VALORES_PARA_LA_PLANTILLA')
+headers = {
+  'Content-Type': 'application/json'
 }
 
-data = {
-     'client':'AQUI_SU_CLIENT',
-     'key':'AQUI_SU_KEY',
-     'template':'AQUI_EL_NOMBRE_DE_LA_PLANTILLA',
-     'content':'AQUI_EL_JSON_CON_LOS_VALORES_PARA_LA_PLANTILLA'
-}
+response = requests.request("POST", url, headers=headers, data=payload)
 
-r = requests.post('https://www.onurix.com/api/v1/whatsapp/send', headers = headers, data = data)
-
-print(r.json())
+print(response.text)
