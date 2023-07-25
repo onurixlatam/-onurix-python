@@ -1,4 +1,5 @@
 import requests
+
 headers ={
 'Content-Type':'application/x-www-form-urlencoded',
 'Accept':'application/json'
@@ -7,10 +8,9 @@ headers ={
 data = {
      'client':'AQUI_SU_CLIENT',
      'key':'AQUI_SU_KEY',
-     'phone':'AQUI_EL_NUMERO_DE_CELULAR',
-     'app-name':'AQUI_NOMBRE_APP',
+     'name':'AQUI_EL_NOMBRE_DE_GRUPO',
 }
 
-r = requests.post('https://www.onurix.com/api/v1/whatsapp/2fa/send', headers = headers, data = data)
+r = requests.post("https://www.onurix.com/api/v1/group/create",data=data,headers=headers)
 
 print(r.json())
