@@ -9,9 +9,8 @@ data = {
      'key':'AQUI_SU_KEY',
      'phone':'AQUI_EL_NUMERO_DE_CELULAR',
      'app-name':'AQUI_NOMBRE_APP',
-     'country-code':'CO'
 }
 
-r = requests.post('https://www.onurix.com/api/v1/2fa/send-sms', headers = headers, data = data)
+r = requests.post('https://www.onurix.com/api/v1/sms/2fa/send', headers = headers, data = data)
 
 print(r.json())

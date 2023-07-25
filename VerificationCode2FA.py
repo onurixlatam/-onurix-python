@@ -10,7 +10,6 @@ data = {
      'phone':'AQUI_EL_NUMERO_DE_CELULAR',
      'code':'AQUI_NOMBRE_APP',
      'app-name':'AQUI_CODIGO',
-     'country-code':'CO'
 }
 
 r = requests.post('https://www.onurix.com/api/v1/2fa/verification-code', headers = headers, data = data)
