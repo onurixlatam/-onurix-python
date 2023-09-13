@@ -3,7 +3,6 @@ headers ={
 'Content-Type':'application/x-www-form-urlencoded',
 'Accept':'application/json'
 }
-
 data = {
      'client':'AQUI_SU_CLIENT',
      'key':'AQUI_SU_KEY',
