@@ -10,6 +10,7 @@ data = {
      'sms':'AQUI_EL_SMS_A_ENVIAR',
      'groups':"AQUI_ID_GRUPOS",#PARA ENVIAR MULTIPLES GRUPOS TENDRAN QUE SER SEPARADOS POR COMAS ","
      }
+
 r = requests.post('https://www.onurix.com/api/sms/send', headers = headers, data = data)
 
 print(r.json())
